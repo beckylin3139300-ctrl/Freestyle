@@ -101,7 +101,7 @@ const Solutions: React.FC = () => {
 
         <div className="mt-20 text-center">
           <p className="text-zen-stone text-sm mb-8 font-light tracking-widest">
-            專業師資群：CHOCHO / BECKY / 妹兒 / 飛飛 / GIGI / PENNY / 老樂
+            專業師資群：BECKY / CHOCHO / PENNY / GIGI
           </p>
           <a 
             href="https://lin.ee/oM3IL72"

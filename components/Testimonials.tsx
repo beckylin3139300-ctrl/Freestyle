@@ -1,70 +1,92 @@
+
 import React from 'react';
+import { Quote } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
+  const testimonials = [
+    {
+      name: "張美凰",
+      text: "環境淸爽舒適，老師專業指導，瑜珈動作配合呼吸，學習放鬆身心，訓練自我的好地方。",
+      imgId: "1KBhl7ETHiuHVWju-nqPCNmEb6g70tEkL",
+      tag: "放鬆身心・自我訓練"
+    },
+    {
+      name: "陳名妍",
+      text: "有各種酸痛的人推薦來上課☺️上完身體都不用去按摩了。牆繩、拉筋伸展、空中瑜伽、瘦瘦課都推薦，增加肌耐力也開發柔軟度💕",
+      imgId: "1ETM9KTQWbGN6mKKN6iCNmcNPx7v8h8NI",
+      tag: "告別痠痛・肌力開發"
+    }
+  ];
+
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-6 max-w-5xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">學員真實改變</h2>
-          <p className="text-gray-500 text-lg">數據與體態不會說謊，他們做到了，你也可以</p>
+    <section className="py-24 bg-white overflow-hidden">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="text-center mb-20">
+          <span className="text-zen-sage font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Student Voice</span>
+          <h2 className="text-3xl md:text-5xl font-light text-zen-dark leading-tight">
+            學員的<span className="font-bold text-zen-wood">真實改變</span>
+          </h2>
+          <div className="w-12 h-1 bg-zen-sage/20 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 mb-12">
-          {/* Case 1 */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow duration-300">
-            <div className="grid grid-cols-2 gap-0.5">
-              <div className="relative h-64 bg-gray-200">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+          {testimonials.map((item, idx) => (
+            <div key={idx} className="group relative">
+              {/* Image Container */}
+              <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl shadow-zen-wood/10 bg-zen-beige">
                 <img 
-                  src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="訓練前" 
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-500" 
+                  src={`https://lh3.googleusercontent.com/d/${item.imgId}`} 
+                  alt={item.name} 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 testimonial-img-filter"
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800";
+                  }}
                 />
-                <span className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">Before</span>
+                {/* Overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-zen-dark/60 via-transparent to-transparent opacity-60"></div>
+                
+                {/* Floating Tag */}
+                <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-zen-wood/10 shadow-sm">
+                  <span className="text-[10px] text-zen-wood font-bold tracking-[0.1em]">{item.tag}</span>
+                </div>
               </div>
-              <div className="relative h-64 bg-gray-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="訓練後" 
-                  className="w-full h-full object-cover" 
-                />
-                <span className="absolute top-2 left-2 bg-green-500 text-black font-bold text-xs px-2 py-1 rounded">After</span>
-              </div>
-            </div>
-            <div className="p-6">
-              <h4 className="font-bold text-xl mb-2 text-gray-900">三個月體脂 -5%</h4>
-              <p className="text-gray-600 italic">"原本住在農 16 都不想動，教練很細心，從簡單的動作開始教起，讓我三個月體脂降了 5%，現在穿衣服更有自信了！"</p>
-              <p className="text-sm text-gray-400 mt-2 text-right">— 上班族 陳小姐</p>
-            </div>
-          </div>
 
-          {/* Case 2 */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow duration-300">
-            <div className="grid grid-cols-2 gap-0.5">
-              <div className="relative h-64 bg-gray-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="訓練前" 
-                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition duration-500" 
-                />
-                <span className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">Before</span>
-              </div>
-              <div className="relative h-64 bg-gray-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1609899537878-39d6a78b06c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="訓練後" 
-                  className="w-full h-full object-cover" 
-                />
-                <span className="absolute top-2 left-2 bg-green-500 text-black font-bold text-xs px-2 py-1 rounded">After</span>
+              {/* Content Card */}
+              <div className="relative -mt-20 mx-6 bg-white p-8 rounded-[2rem] shadow-xl border border-zen-wood/5 transform transition-transform duration-500 group-hover:-translate-y-2">
+                <Quote className="w-8 h-8 text-zen-sage/20 absolute -top-4 left-8 bg-white rounded-full p-1" />
+                
+                <p className="text-zen-stone leading-relaxed mb-6 font-light text-lg italic">
+                  「{item.text}」
+                </p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="h-px bg-zen-sage/30 flex-grow mr-4"></div>
+                  <div className="text-right">
+                    <span className="text-zen-dark font-bold text-xl">{item.name}</span>
+                    <span className="text-zen-sage text-[10px] font-bold block tracking-widest uppercase">Member</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="p-6">
-              <h4 className="font-bold text-xl mb-2 text-gray-900">改善圓肩與下背痛</h4>
-              <p className="text-gray-600 italic">"長期久坐讓我腰痠背痛，教練不只是帶重訓，還幫我放鬆緊繃肌群，現在體態變挺了，疼痛也消失了。"</p>
-              <p className="text-sm text-gray-400 mt-2 text-right">— 工程師 林先生</p>
-            </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="mt-24 text-center">
+          <p className="text-zen-stone/60 text-sm font-light italic">
+            * 每一份回饋都是我們前進的動力
+          </p>
         </div>
       </div>
+
+      <style>{`
+        .testimonial-img-filter {
+          filter: brightness(1.02) contrast(1.02) saturate(0.98);
+        }
+        .group:hover .testimonial-img-filter {
+          filter: brightness(1.05) contrast(1.05);
+        }
+      `}</style>
     </section>
   );
 };
