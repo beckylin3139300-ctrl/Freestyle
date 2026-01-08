@@ -7,44 +7,50 @@ const Solutions: React.FC = () => {
     {
       icon: <Anchor className="w-6 h-6" />,
       title: "專業牆繩瑜珈",
-      image: "https://images.unsplash.com/photo-1599447292180-45fd84092ef4?q=80&w=800&auto=format&fit=crop",
+      image: "https://lh3.googleusercontent.com/d/1_qUJ1r0bns-_zn4-KVo_njCSrAG65Q0e",
       tags: ["牆繩瑜珈", "低空療癒"],
-      desc: "Freestyle 核心主打。利用特製牆繩系統提供支撐，深層延展脊椎與肌群，解決久坐疲累與體態不正。"
+      desc: "Freestyle 核心主打。利用特製牆繩系統提供支撐，深層延展脊椎與肌群，解決久坐疲累與體態不正。",
+      objectPos: "center"
     },
     {
       icon: <Wind className="w-6 h-6" />,
       title: "空中美學系列",
-      image: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=800&auto=format&fit=crop",
+      image: "https://lh3.googleusercontent.com/d/1ZdZjvC0Y_xxd3SHaDpbjUul9nPeT2xXl",
       tags: ["空中瑜珈", "空中皮拉提斯", "入門空中"],
-      desc: "透過掛布對抗地心引力，訓練深層核心穩定，享受飛翔中的優雅與力量轉化。"
+      desc: "透過掛布對抗地心引力，訓練深層核心穩定，享受飛翔中的優雅與力量轉化。",
+      objectPos: "center" // 調整為正中央顯示
     },
     {
       icon: <Music className="w-6 h-6" />,
       title: "動感有氧・舞動",
-      image: "https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?q=80&w=800&auto=format&fit=crop",
+      image: "https://lh3.googleusercontent.com/d/1mTxKBkheuaXpCLEblcM8orlsWqDckFJw",
       tags: ["Zumba", "KPOP MV", "入門階梯"],
-      desc: "高燃脂的節奏盛宴。在音樂中釋放壓力，提升心肺功能，讓運動變成一場快樂的聚會。"
+      desc: "高燃脂的節奏盛宴。在音樂中釋放壓力，提升心肺功能，讓運動變成一場快樂的聚會。",
+      objectPos: "center"
     },
     {
       icon: <Dumbbell className="w-6 h-6" />,
       title: "精準塑身・功能訓練",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop",
+      image: "https://lh3.googleusercontent.com/d/1JLQFKk7KFIVKIQh0cty5xvdMMmM4OaGm",
       tags: ["TRX", "硬式壺鈴", "PIYO塑身"],
-      desc: "引進紐約反作用力體適能系統，透過多功能訓練與阻力，精雕肌肉線條，打造易瘦體質。"
+      desc: "引進紐約反作用力體適能系統，透過多功能訓練與阻力，精雕肌肉線條，打造易瘦體質。",
+      objectPos: "center"
     },
     {
       icon: <UserCheck className="w-6 h-6" />,
       title: "私教包班・企業租借",
       image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop",
       tags: ["一對一教學", "私人包班", "場地租借"],
-      desc: "提供高隱私感的客製化教學，或是為您的團隊預約一場專屬的身心修復之旅。"
+      desc: "提供高隱私感的客製化教學，或是為您的團隊預約一場專屬的身心修復之旅。",
+      objectPos: "center"
     },
     {
       icon: <ShieldCheck className="w-6 h-6" />,
       title: "身心修復・伸展",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
       tags: ["伸展拉筋", "地板瑜珈", "核心瑜珈"],
-      desc: "針對現代人高壓生活設計，放慢節奏，在老師專業指導下，進行細膩的筋膜放鬆與核心強化。"
+      desc: "針對現代人高壓生活設計，放慢節奏，在老師專業指導下，進行細膩的筋膜放鬆與核心強化。",
+      objectPos: "center"
     }
   ];
 
@@ -69,7 +75,9 @@ const Solutions: React.FC = () => {
                 <img 
                   src={course.image} 
                   alt={course.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 solution-img-filter"
+                  style={{ objectPosition: course.objectPos }}
+                  loading="lazy"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop';
                   }}
@@ -113,6 +121,17 @@ const Solutions: React.FC = () => {
           </a>
         </div>
       </div>
+
+      <style>{`
+        /* 數位美學濾鏡：微調對比、提升透亮度、維持柔和色彩 */
+        .solution-img-filter {
+          filter: brightness(1.05) contrast(1.03) saturate(0.98);
+          transition: filter 0.8s ease;
+        }
+        .group:hover .solution-img-filter {
+          filter: brightness(1.1) contrast(1.05) saturate(1.05);
+        }
+      `}</style>
     </section>
   );
 };

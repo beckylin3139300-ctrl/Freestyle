@@ -54,13 +54,6 @@ const Gallery: React.FC = () => {
                 }}
               />
 
-              {/* 漂浮標籤 */}
-              <div className="absolute bottom-6 left-6 z-20 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                <span className="text-white text-[10px] tracking-widest uppercase font-bold border-l-2 border-zen-sage pl-3">
-                  {img.label}
-                </span>
-              </div>
-
               {/* 裝飾性玻璃光澤 */}
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/10 to-transparent opacity-30"></div>
             </div>
