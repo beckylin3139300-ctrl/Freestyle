@@ -10,7 +10,7 @@ const PainPoints: React.FC = () => {
     },
     {
       title: "專業度絕不妥協",
-      desc: "館內所有課程皆由具備國際證照之老師親自指導，包含 WeckMethod RMTS 國際認證與多項體適能專業，確保您的練習品質與世界接軌。"
+      desc: "館內所有課程皆由具備國際證照之老師親自指導，包含美國瑜伽協會聯盟 RYT 200 國際認證與多項體適能專業，確保您的練習品質與世界接軌。"
     },
     {
       title: "巨蛋區最美淨土",
@@ -32,22 +32,22 @@ const PainPoints: React.FC = () => {
               <div className="absolute -bottom-10 -right-10 bg-zen-wood p-8 rounded-3xl text-white shadow-2xl hidden md:block animate-pulse-soft">
                 <Award className="w-12 h-12 mb-4" />
                 <div className="text-xl font-bold">NYCF</div>
-                <div className="text-xs tracking-widest opacity-80 uppercase">Authorized Studio</div>
+                <div className="text-xs tracking-widest opacity-90 uppercase">Authorized Studio</div>
               </div>
             </div>
           </div>
           
           <div className="w-full lg:w-1/2">
-            <span className="text-zen-wood font-medium tracking-widest uppercase text-sm mb-6 block">Professional Standards</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-zen-dark mb-10 leading-tight">不僅是瑜珈<br/><span className="font-light">更是一場科學的體態進化</span></h2>
+            <span className="text-zen-wood font-bold tracking-widest uppercase text-sm mb-6 block">Professional Standards</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-zen-dark mb-10 leading-tight">不僅是瑜珈<br/><span className="font-light">更是一場科學的體態進化</span></h2>
             
             <div className="space-y-10">
               {points.map((point, index) => (
                 <div key={index} className="flex gap-6 group">
-                  <div className="text-2xl font-serif text-zen-sage/30 group-hover:text-zen-sage transition-colors duration-500">0{index + 1}</div>
+                  <div className="text-3xl font-serif text-zen-sage/40 group-hover:text-zen-sage transition-colors duration-500">0{index + 1}</div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2 text-zen-dark">{point.title}</h3>
-                    <p className="text-zen-stone leading-relaxed text-sm font-light">
+                    <h3 className="text-xl font-black mb-2 text-zen-dark">{point.title}</h3>
+                    <p className="text-zen-stone leading-relaxed text-base font-medium">
                       {point.desc}
                     </p>
                   </div>

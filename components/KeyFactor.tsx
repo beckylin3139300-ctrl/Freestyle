@@ -7,7 +7,7 @@ const KeyFactor: React.FC = () => {
     <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
-          <span className="text-zen-wood font-medium tracking-[0.3em] uppercase text-xs mb-4 block">The Secret of Transformation</span>
+          <span className="text-zen-wood font-bold tracking-[0.3em] uppercase text-xs mb-4 block">The Secret of Transformation</span>
           <h2 className="text-3xl md:text-5xl font-light text-zen-dark">運動解決痛點的<span className="font-bold text-zen-sage">核心關鍵</span></h2>
         </div>
 
@@ -29,12 +29,12 @@ const KeyFactor: React.FC = () => {
               desc: "優雅輕盈的空間結合呼吸調控，有效調解自律神經，讓高壓的身心在練習中獲得真正的深度修復。"
             }
           ].map((item, idx) => (
-            <div key={idx} className="group p-10 rounded-[3rem] bg-zen-beige/50 border border-zen-wood/5 hover:bg-zen-sage hover:text-white transition-all duration-700 hover:-translate-y-2">
+            <div key={idx} className="group p-10 rounded-[3rem] bg-zen-beige/50 border border-zen-wood/10 hover:bg-zen-sage hover:text-white transition-all duration-700 hover:-translate-y-2 shadow-sm">
               <div className="text-zen-sage group-hover:text-white mb-6 transition-colors duration-500">
                 {item.icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-              <p className="opacity-80 leading-relaxed font-light">{item.desc}</p>
+              <h3 className="text-2xl font-black mb-4">{item.title}</h3>
+              <p className="text-zen-stone group-hover:text-white/90 leading-relaxed font-medium transition-colors duration-500">{item.desc}</p>
             </div>
           ))}
         </div>

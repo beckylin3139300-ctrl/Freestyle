@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           
           {[
             { step: '01', title: '加 LINE 諮詢', desc: '專業顧問一對一回覆' },
-            { step: '02', title: '預約評估', desc: '安排合適您的時段' },
+            { step: '02', title: '預約體驗', desc: '安排合適您的時段' },
             { step: '03', title: '展開練習', desc: '享受專屬您的瑜珈時光' }
           ].map((item, idx) => (
             <div key={idx} className="relative z-10 flex flex-col items-center group">
