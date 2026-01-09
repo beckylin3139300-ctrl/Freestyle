@@ -64,12 +64,13 @@ const ComparisonGrid: React.FC = () => {
                 <div className="flex items-center py-8 md:py-10">
                   {/* Winning Item */}
                   <div className="flex-1 flex items-center justify-center relative">
-                    <div className="absolute left-0 -top-1 md:-top-4">
-                       <div className="w-10 h-10 md:w-12 md:h-12 bg-[#B91C1C] rounded-full flex items-center justify-center text-white text-lg md:text-xl font-bold shadow-lg border-2 border-white transform -rotate-12 group-hover:scale-110 transition-transform">
+                    {/* 修復圓標定位：移至左上方外部，避免遮擋文字 */}
+                    <div className="absolute -left-2 -top-6 md:-left-4 md:-top-8 z-10">
+                       <div className="w-8 h-8 md:w-11 md:h-11 bg-[#B91C1C] rounded-full flex items-center justify-center text-white text-sm md:text-lg font-bold shadow-lg border-2 border-white transform -rotate-12 group-hover:scale-110 group-hover:rotate-0 transition-all duration-500">
                          勝
                        </div>
                     </div>
-                    <div className="text-center font-bold text-slate-800 text-lg md:text-2xl px-2 leading-snug">
+                    <div className="text-center font-bold text-slate-800 text-lg md:text-2xl px-2 leading-snug relative z-0">
                       {row.freestyle}
                     </div>
                   </div>

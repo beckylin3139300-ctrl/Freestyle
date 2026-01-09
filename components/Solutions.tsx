@@ -16,9 +16,9 @@ const Solutions: React.FC = () => {
       icon: <Wind className="w-6 h-6" />,
       title: "空中美學系列",
       image: "https://lh3.googleusercontent.com/d/1ZdZjvC0Y_xxd3SHaDpbjUul9nPeT2xXl",
-      tags: ["空中瑜珈", "空中皮拉提斯", "入門空中"],
-      desc: "透過掛布對抗地心引力，訓練深層核心穩定，享受飛翔中的優雅與力量轉化。",
-      objectPos: "center" // 調整為正中央顯示
+      tags: ["空中瑜珈", "空中皮拉提斯", "入門空中", "低空療癒"],
+      desc: "透過吊床對抗地心引力，訓練深層核心穩定，享受飛翔中的優雅與力量轉化。",
+      objectPos: "center"
     },
     {
       icon: <Music className="w-6 h-6" />,
@@ -40,7 +40,7 @@ const Solutions: React.FC = () => {
       icon: <UserCheck className="w-6 h-6" />,
       title: "私教包班・企業租借",
       image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop",
-      tags: ["一對一教學", "私人包班", "場地租借"],
+      tags: ["一對一教學", "私人包班", "場地租借", "企業包班"],
       desc: "提供高隱私感的客製化教學，或是為您的團隊預約一場專屬的身心修復之旅。",
       objectPos: "center"
     },
@@ -123,7 +123,6 @@ const Solutions: React.FC = () => {
       </div>
 
       <style>{`
-        /* 數位美學濾鏡：微調對比、提升透亮度、維持柔和色彩 */
         .solution-img-filter {
           filter: brightness(1.05) contrast(1.03) saturate(0.98);
           transition: filter 0.8s ease;

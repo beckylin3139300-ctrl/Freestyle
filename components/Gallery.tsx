@@ -2,14 +2,13 @@
 import React from 'react';
 
 const Gallery: React.FC = () => {
-  // 將所有 Google Drive 聯結轉化為直接顯示格式，共 6 張實景照片
   const images = [
     { id: "1J9TN-7d7p7U2hkPUEd-3l6p-zGxstxOf", label: "優雅入口區" },
     { id: "1H6k6ea64R_pB1KFJrDUK10wEe6zOlMHw", label: "明亮練習空間" },
-    { id: "1_UvT1dgE2PhZO1VJKgzcLUFMF5eefUvf", label: "專業牆繩設備" },
+    { id: "1q5Jug7_cG5b_dFKjlJCcTumXhKpB2DA8", label: "空靈練習美學" }, // 右邊第三張 (index 2)
     { id: "1NlRPDL3Y5n1-Rdp-KYHPiFWk63GJWbKI", label: "美學休憩角落" },
-    { id: "1tl-EiRCgsUTbSqpWCN29O2s7aUde9wcV", label: "身心平衡場域" },
-    { id: "11AnvmN1xZDb8PYQjeJpirWLkFYjwIbuB", label: "質感掛布特寫" }
+    { id: "1tl-EiRCgsUTbSqpWCN29O2s7aUde9wcV", label: "身心平衡場域" }, // 下面第二張 (index 4)
+    { id: "11AnvmN1xZDb8PYQjeJpirWLkFYjwIbuB", label: "質感吊床特寫" }
   ];
 
   return (
@@ -30,7 +29,6 @@ const Gallery: React.FC = () => {
           </div>
         </div>
         
-        {/* 錯落式藝廊排版 */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
           {images.map((img, idx) => (
             <div 
@@ -41,7 +39,6 @@ const Gallery: React.FC = () => {
                 ${idx === 4 ? 'md:-translate-y-12' : ''}
               `}
             >
-              {/* 數位美化濾鏡與疊加層 */}
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-zen-dark/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               
               <img 
@@ -53,8 +50,12 @@ const Gallery: React.FC = () => {
                   (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800";
                 }}
               />
+              
+              {/* Image Label Overlay on Hover */}
+              <div className="absolute bottom-6 left-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <p className="text-white text-sm font-bold tracking-widest">{img.label}</p>
+              </div>
 
-              {/* 裝飾性玻璃光澤 */}
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/10 to-transparent opacity-30"></div>
             </div>
           ))}
@@ -74,7 +75,6 @@ const Gallery: React.FC = () => {
       </div>
 
       <style>{`
-        /* 數位美學濾鏡：微調對比、柔化光影、呈現透亮感 */
         .studio-img-filter {
           filter: brightness(1.02) contrast(1.03) saturate(0.95);
           transition: filter 0.8s ease;

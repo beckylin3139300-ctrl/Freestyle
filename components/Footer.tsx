@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <span className="text-zen-sage font-medium tracking-[0.3em] uppercase text-xs mb-6 block">Ready to Begin?</span>
         <h2 className="text-3xl md:text-5xl font-light mb-8 leading-tight">在 Freestyle<br/><span className="font-bold italic">找回屬於您的輕盈</span></h2>
-        <p className="text-gray-400 mb-16 text-lg font-light">踏上掛布的那一刻，就是重生的開始。</p>
+        <p className="text-gray-400 mb-16 text-lg font-light">踏上吊床的那一刻，就是重生的開始。</p>
 
         {/* Steps */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20 relative">
