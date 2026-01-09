@@ -21,7 +21,7 @@ const KeyFactor: React.FC = () => {
             {
               icon: <Zap className="w-10 h-10" />,
               title: "深層核心覺知",
-              desc: "透過空中瑜珈與牆繩支撐，讓大腦重新連結深層核心，改善因長期久坐導致的體態崩塌，找回挺拔身姿。"
+              desc: "透過空中瑜珈與美國瑜伽牆繩支撐，讓大腦重新連結深層核心，改善因長期久坐導致的體態崩塌，找回挺拔身姿。"
             },
             {
               icon: <HeartPulse className="w-10 h-10" />,

@@ -8,8 +8,8 @@ const Solutions: React.FC = () => {
       icon: <Anchor className="w-6 h-6" />,
       title: "專業牆繩瑜珈",
       image: "https://lh3.googleusercontent.com/d/1_qUJ1r0bns-_zn4-KVo_njCSrAG65Q0e",
-      tags: ["牆繩瑜珈", "低空療癒"],
-      desc: "Freestyle 核心主打。利用特製牆繩系統提供支撐，深層延展脊椎與肌群，解決久坐疲累與體態不正。",
+      tags: ["美國瑜伽牆繩", "低空療癒"],
+      desc: "Freestyle 核心主打。美國瑜伽牆繩結合瑜伽牆、繩索與輔具，讓練習者在支撐與穩定中，更安全、更有效地進行瑜珈體式，解決久坐疲累與體態不正。",
       objectPos: "center"
     },
     {
@@ -23,7 +23,7 @@ const Solutions: React.FC = () => {
     {
       icon: <Music className="w-6 h-6" />,
       title: "動感有氧・舞動",
-      image: "https://lh3.googleusercontent.com/d/1mTxKBkheuaXpCLEblcM8orlsWqDckFJw",
+      image: "https://lh3.googleusercontent.com/d/1mTxKBheuaXpCLEblcM8orlsWqDckFJw",
       tags: ["Zumba", "KPOP MV", "入門階梯"],
       desc: "高燃脂的節奏盛宴。在音樂中釋放壓力，提升心肺功能，讓運動變成一場快樂的聚會。",
       objectPos: "center"
@@ -64,7 +64,7 @@ const Solutions: React.FC = () => {
           <span className="text-zen-sage font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Our Curriculum</span>
           <h2 className="text-3xl md:text-5xl font-light text-zen-dark mb-6">紐約專業系統<br/><span className="font-bold text-zen-wood">打造您的全方位課表</span></h2>
           <div className="w-16 h-1 bg-zen-sage/30 mx-auto rounded-full mb-6"></div>
-          <p className="text-zen-stone font-light text-lg italic">「牆繩、空中、有氧、塑身」四大核心，由專業團隊領軍教學。</p>
+          <p className="text-zen-stone font-light text-lg italic">「美國瑜伽牆繩、空中、有氧、塑身」四大核心，由專業團隊領軍教學。</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
