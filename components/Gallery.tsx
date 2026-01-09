@@ -2,13 +2,14 @@
 import React from 'react';
 
 const Gallery: React.FC = () => {
-  const images = [
-    { id: "1J9TN-7d7p7U2hkPUEd-3l6p-zGxstxOf", label: "優雅入口區" },
-    { id: "1H6k6ea64R_pB1KFJrDUK10wEe6zOlMHw", label: "明亮練習空間" },
-    { id: "1q5Jug7_cG5b_dFKjlJCcTumXhKpB2DA8", label: "空靈練習美學" }, // 右邊第三張 (index 2)
-    { id: "1NlRPDL3Y5n1-Rdp-KYHPiFWk63GJWbKI", label: "美學休憩角落" },
-    { id: "1tl-EiRCgsUTbSqpWCN29O2s7aUde9wcV", label: "身心平衡場域" }, // 下面第二張 (index 4)
-    { id: "11AnvmN1xZDb8PYQjeJpirWLkFYjwIbuB", label: "質感吊床特寫" }
+  // 簡化資料結構，僅保留圖片 ID
+  const imageIds = [
+    "1J9TN-7d7p7U2hkPUEd-3l6p-zGxstxOf",
+    "1H6k6ea64R_pB1KFJrDUK10wEe6zOlMHw",
+    "1q5Jug7_cG5b_dFKjlJCcTumXhKpB2DA8",
+    "1NlRPDL3Y5n1-Rdp-KYHPiFWk63GJWbKI",
+    "1tl-EiRCgsUTbSqpWCN29O2s7aUde9wcV",
+    "11AnvmN1xZDb8PYQjeJpirWLkFYjwIbuB"
   ];
 
   return (
@@ -30,7 +31,7 @@ const Gallery: React.FC = () => {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-          {images.map((img, idx) => (
+          {imageIds.map((id, idx) => (
             <div 
               key={idx} 
               className={`group relative rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl shadow-zen-wood/5 transition-all duration-1000 bg-white
@@ -39,11 +40,11 @@ const Gallery: React.FC = () => {
                 ${idx === 4 ? 'md:-translate-y-12' : ''}
               `}
             >
-              <div className="absolute inset-0 z-10 bg-gradient-to-t from-zen-dark/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-zen-dark/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               
               <img 
-                src={`https://lh3.googleusercontent.com/d/${img.id}`} 
-                alt={img.label} 
+                src={`https://lh3.googleusercontent.com/d/${id}`} 
+                alt="Studio Atmosphere" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 studio-img-filter"
                 loading="lazy"
                 onError={(e) => {
@@ -51,11 +52,6 @@ const Gallery: React.FC = () => {
                 }}
               />
               
-              {/* Image Label Overlay on Hover */}
-              <div className="absolute bottom-6 left-6 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <p className="text-white text-sm font-bold tracking-widest">{img.label}</p>
-              </div>
-
               <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-white/10 to-transparent opacity-30"></div>
             </div>
           ))}
