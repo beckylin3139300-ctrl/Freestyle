@@ -37,7 +37,6 @@ const Teachers: React.FC = () => {
         "陰瑜伽師資認證",
         "AFAA PIC 國際證照"
       ],
-      // 根據正確 ID 修正：1AkMx4LUyTDOopOku6U6ITy2ntUGpTJhC
       img: "https://lh3.googleusercontent.com/d/1AkMx4LUyTDOopOku6U6ITy2ntUGpTJhC",
       fallback: "https://images.unsplash.com/photo-1599447292180-45fd84092ef4?q=80&w=600"
     },
@@ -63,16 +62,30 @@ const Teachers: React.FC = () => {
       role: "專業師資", 
       skill: "空中瑜珈、牆繩瑜珈、陰瑜伽、健康管理師、高齡銀髮瑜珈", 
       certs: [
-        "2024 聚光瑜珈學院 RYT200 師資",
-        "2020 AntiGravity® Fundamentals 1+2 認證",
-        "2025 Kris Yoga School 陰瑜伽•內觀瑜伽師資",
-        "2022 臺北醫學大學 - 健康管理師",
-        "2023 聚光瑜珈學院 - 牆繩瑜珈 / 銀髮瑜珈指導",
-        "2023 高雄醫學大學 - 躍動增肌銀髮指導員",
-        "2021 TATHA 自我筋膜放鬆指導員"
+        "美國瑜珈聯盟 RYT200 認證教師",
+        "AntiGravity® 反重力空中瑜珈 1+2 認證",
+        "陰瑜伽•內觀瑜伽師資",
+        "墊上皮拉提斯師資",
+        "牆繩瑜珈",
+        "高齡銀髮瑜珈指導員 / 躍動增肌銀髮指導員",
+        "TATHA 自我筋膜放鬆指導員"
       ],
       img: "https://lh3.googleusercontent.com/d/1e1zrYqjz3fA13BZ5IXsi6lFxQucNJQ8A",
       fallback: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600"
+    },
+    { 
+      name: "飛飛", 
+      role: "專業師資", 
+      skill: "TRX", 
+      certs: [
+        "TRX-STC",
+        "中華空中瑜珈C級",
+        "中華民國皮拉提斯運動協會C級",
+        "CPR+AED",
+        "E-Training"
+      ],
+      img: "https://lh3.googleusercontent.com/d/1V_mFW-9_RORrKg6yuc503n1EQTjubeQV",
+      fallback: "https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=600"
     }
   ];
 
@@ -89,7 +102,7 @@ const Teachers: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
           {teachers.map((t, idx) => (
             <div key={idx} className="group relative rounded-[2.5rem] overflow-hidden bg-white shadow-sm hover:shadow-2xl transition-all duration-700 h-[500px]">
               <div className="absolute inset-0 overflow-hidden bg-gray-200">
@@ -102,7 +115,6 @@ const Teachers: React.FC = () => {
                     const target = e.target as HTMLImageElement;
                     if (target.src !== t.fallback) {
                       target.src = t.fallback;
-                      console.warn(`Teacher ${t.name} image failed to load, switching to fallback.`);
                     }
                   }}
                 />
